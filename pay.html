@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+
+</head>
+
+<body>
+
+    <h1>Button Link</h1>
+
+
+
+    <button id="paybutton" onclick="startTimer()">Pay</button>
+
+    <button id="playbutton">Play</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var timeRemaining = 0;
+        function init() {
+            timeRemaining = 0;
+            document.getElementById("demo").innerHTML = "INIT";
+            document.getElementById("playbutton").disabled = true;
+        }
+        function startTimer() {
+            timeRemaining = 10;
+            document.getElementById("playbutton").disabled = false;
+            var x = setInterval(function () {
+                document.getElementById("demo").innerHTML = timeRemaining + " seconds";
+                timeRemaining--;
+                if (timeRemaining < 0) {
+                    clearInterval(x);
+                    timeRemaining = 0;
+                    document.getElementById("demo").innerHTML = "TIME'S UP";
+                    document.getElementById("playbutton").disabled = true;
+                }
+            }, 1000);
+        }
+
+        init();
+    </script>
+
+
+</body>
+
+</html>
