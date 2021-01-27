@@ -10,7 +10,8 @@
     
     <img src="./s.png"></img>
 
-    <a href="pay.html">Click to open Pay</a>
+      
+    <p id="demo"></p>
 
     <h1>Rock Paper Scissors Game</h1>
 
@@ -19,5 +20,34 @@
     <p><a href="Ball Puncher.html"><img src="s(4).png"></a></p>
     <p><a href="Shooting Game with Zombies .html"><img src="s(1).png"></a></p>
     <p><a href="Craig's Book Hunt.html"><img src="s(3).png"></a></p>
+    
+    
+    
+        <script>
+        var timeRemaining = 0;
+        function init() {
+            timeRemaining = 0;
+            document.getElementById("demo").innerHTML = "INIT";
+            //document.getElementById("playbutton").disabled = true;
+        }
+        function startTimer() {
+            timeRemaining = 10;
+            //document.getElementById("playbutton").disabled = false;
+            var x = setInterval(function () {
+                document.getElementById("demo").innerHTML = timeRemaining + " seconds";
+                timeRemaining--;
+                if (timeRemaining < 0) {
+                    clearInterval(x);
+                    timeRemaining = 0;
+                    document.getElementById("demo").innerHTML = "TIME'S UP";
+                    //document.getElementById("playbutton").disabled = true;
+                }
+            }, 1000);
+        }
+
+        init();
+    </script>
+
+
 </body>
 </html>
