@@ -15,12 +15,13 @@
 
     <h1>Rock Paper Scissors Game</h1>
 
-    <p><a href="Rock Paper Scissors final v01.html"><img src="s(2).png"></a></p>
-    <p><a href="ZOMBIE CUBE (1).html"><img src="s(5).png"></a></p>
-    <p><a href="Ball Puncher.html"><img src="s(4).png"></a></p>
-    <p><a href="Shooting Game with Zombies .html"><img src="s(1).png"></a></p>
-    <p><a href="Craig's Book Hunt.html"><img src="s(3).png"></a></p>
-    
+    <div id="gamelinks">
+    <p><a href="Rock Paper Scissors final v01.html"><img src="s(2).png"></a>
+    <p><a href="ZOMBIE CUBE (1).html"><img src="s(5).png"></a>
+    <p><a href="Ball Puncher.html"><img src="s(4).png"></a>
+    <p><a href="Shooting Game with Zombies .html"><img src="s(1).png"></a>
+    <p><a href="Craig's Book Hunt.html"><img src="s(3).png"></a>
+    </div>
     
     
         <script>
@@ -40,6 +41,7 @@
                     clearInterval(x);
                     timeRemaining = 0;
                     document.getElementById("demo").innerHTML = "TIME'S UP";
+                    document.getElementById("gamelinks").innerHTML="<H1>TIME'S UP BOSS</H1>";
                     //document.getElementById("playbutton").disabled = true;
                 }
             }, 1000);
