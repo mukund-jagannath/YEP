@@ -1,0 +1,57 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#yepcontainer {
+    background-color: #003049;
+    width: 90%;
+    height: 180px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    border: 5px solid #003049;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+#yepcontainer div {
+    height : 600 px;
+    width : 400 px;
+    text-align: center  ;
+}
+
+#gamescorner {
+   /* background-color: rgb(225, 129, 177);*/
+    width: auto;
+    height: 700px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+ /*   border: 5px solid #003049; */
+    justify-content: space-around;
+    align-items: top;
+}
+
+#gamelist {
+    /* background-color: brown; */
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    /* border: 5px solid #003049; */
+    justify-content: space-between;
+    
+}
+
+#gamearea {
+    /* background-color: green; */
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    /* border: 5px solid #003049; */
+    justify-content: space-between;
+    
+}
