@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://mukund-jagannath.github.io/YEP/app.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
 
@@ -20,6 +20,7 @@
   h5,
   h6 {
     font-family: "Lato", sans-serif;
+
   }
 
   .my-head {
@@ -58,17 +59,13 @@
     min-height: 350px;
   }
 
-  /* Second image (Portfolio) 
-  .bgimg-2 {
-    background-image: url("https://i.pinimg.com/236x/a8/3f/d3/a83fd3e3698836945e6220bfbb71c181.jpg");
-    min-height: 400px;
-  } */
 
   /*  image Team */
   .bgimg-3 {
     background-image: url("https://mukund-jagannath.github.io/YEP/team.jpg");
+
     background-color: black;
-    min-height: 100px;
+    min-height: 300px;
 
 
   }
@@ -92,6 +89,36 @@
       min-height: 400px;
     }
   }
+
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+  }
+
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: -5px;
+    right: 105%;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 </style>
 
 <body style="background-color: rgb(23, 97, 126);">
@@ -105,18 +132,17 @@
       </a>
       <a href="#home" class="w3-bar-item w3-button">HOME</a>
       <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-arrow-up"></i> ABOUT</a>
-      <a href="#gamescorner" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>GAMES CORNER</a>
-      <a href="#team" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> TEAM </a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-white">
-        <i class="fa fa-search"></i>
+      <a href="#gamesheader" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>GAMES CORNER</a>
+      <a href="#yepcontainer" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> TEAM </a>
+
       </a>
     </div>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
       <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-      <a href="#gamescorner" class="w3-bar-item w3-button" onclick="toggleFunction()">GAMES CORNER</a>
-      <a href="#team" class="w3-bar-item w3-button" onclick="toggleFunction()">TEAM</a>
+      <a href="#gamesheader" class="w3-bar-item w3-button" onclick="toggleFunction()">GAMES CORNER</a>
+      <a href="#yepcontainer" class="w3-bar-item w3-button" onclick="toggleFunction()">TEAM</a>
       <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
   </div>
@@ -128,309 +154,286 @@
     </div>
   </div>
 
+
   <!-- Container (About Section) -->
   <div class="w3-content w3-container w3-padding-10" id="about">
-    <h3 class="w3-center w3-text-lime"><b>ABOUT THIS PAGE</b></h3>
-    <p class="w3-center"><em></em></p>
-    <p>Welcome to the world of online gaming. We have created a set of five interesting games for your entertainment.
+    <h3 class="w3-center w3-text-lime w3-xxlarge"><b>ABOUT THIS PAGE</b></h3>
+    <p class="w3-center w3-small"><em></em></p>
+    <p class="w3-center w3-cursive w3-xlarge"> Welcome to the world of online gaming. We have created a set of five
+      interesting
+      games for your entertainment.
       Sit back and enjoy !!
     </p>
-    <p class="w3-center"><em></em></p>
-    <p>Remember you have only 20 minutes to play as many games as you like and as many times as you
+    <p class="w3-center w3-small"><em></em></p>
+    <p class="w3-center w3-cursive w3-xlarge">Remember you have only <ins>20 minutes</ins> to play as many games as you
+      like and as
+      many times as you
       like !!
+    </p>
+
+    <p class="w3-center w3-small"><em></em></p>
+    <p class="w3-center w3-cursive w3-xsmall">The games are playable on computers and laptops only
     </p>
 
     <div class="w3-row">
     </div>
-    <!--   <div class="w3-col m6 w3-center w3-padding-large">
+  </div>
+  <div id="gamesheader">
+    <p class="w3-center w3-text-lime w3-xxlarge"><b>GAMES CORNER</b></p>
+    <p class="w3-center w3-large"><em>Hover your cursor on the game image to read the instructions. Click on the game
+        image to
+        play the game</em></p>
+
+  </div>
+
+
+  <!-- Container (Games corner Section) -->
+  <div class="w3-content w3-container " id="gamescorner">
+    <div id="gamelist">
+      <div class="tooltip">
+        <img src="https://mukund-jagannath.github.io/YEP/s(2).png" style="width:151PX" class="w3-hover-opacity"
+          onclick=startgame(1) alt="ROCK PAPER SCISSORS">
+        <span class="tooltiptext">Use your mouse to click your option. Rock beats Sciccors, Scissors beats Paper and
+          Paper beats Rock</span>
+
+        <!--       <span class="w3-row-padding w3-center w3-text-white">Use your mouse to click your option and defeat
+          Yeppy</span> -->
+      </div>
+
+      <div class="tooltip">
+        <img src="https://mukund-jagannath.github.io/YEP/s(4).png" style="width:151PX" class="w3-hover-opacity"
+          onclick=startgame(2) alt="BALL PUNCHER">
+        <span class="tooltiptext">Use your left and right arrow keys to move the ball to the other side
+          avoiding the obstacles</span>
+        <!--       <span class="w3-row-padding w3-center w3-text-yellow">Use your left and right arrow keys to move the ball
+          avoiding the obstacles</span> -->
+      </div>
+
+      <div class="tooltip">
+        <img src="https://mukund-jagannath.github.io/YEP/s(5).png" style="width:151PX" class="w3-hover-opacity"
+          onclick=startgame(3) alt="ZOMBIE CUBE">
+        <span class="tooltiptext">Use your WASD keys OR arrow keys to move your cube
+          through the maze
+          avoiding the zombie cubes</span>
+        <!-- <span class="w3-row-padding w3-center w3-text-white">Use your WASD keys OR arrow keys to move your cube
+          through the maze
+          avoiding the zombie cubes </span> -->
+      </div>
+
+      <div class="tooltip">
+        <img src="https://mukund-jagannath.github.io/YEP/s(1).png" style="width:151PX" class="w3-hover-opacity"
+          onclick=startgame(4) alt="ZOMBIE SHOOTOUT">
+        <span class="tooltiptext">Use your arrow keys to move around and space key to shoot the
+          zombies<< /span>
+            <!--     <span class="w3-row-padding w3-center w3-text-yellow">Use your arrow keys to move and space key to shoot the
+          zombies</span> -->
 
       </div>
-      <p class="w3-large w3-center w3-padding-16"></p>
-      <p class="w3-wide"><i class="fa fa-camera"></i>EFFORT</p>
-      <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-laptop"></i>DEDICATION</p>
-      <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo"></i>GUARANTEE</p>
-      <div class="w3-light-grey">
-        <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-      </div>
-    </div>
-    <br><br><br>
 
-    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">10</span><br>
-        Members
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">5</span><br>
-        Games
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">Daily</span><br>
-        Meetings
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">100%</span><br>
-        Cooperation
-      </div>
-    </div>
-  -->
-    <!-- Second Parallax Image with Portfolio Text -->
-    <!--
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-black w3-wide">PREVIEW OUR GAMES</span>
-      </div>
-    </div>
-  -->
-    <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-10" id="gamescorner">
-      <h3 class="w3-center w3-text-lime"><b>GAMES CORNER</b></h3>
-      <p class="w3-center"><em>Click on the links to play the game</em></p>
-
-      <p id="demo" class="w3-center w3-xxlarge w3-text-yellow"><em>I am your timer</em></p><br>
-
-      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-      <div class="w3-row-padding w3-center">
-        <div class="w3-col m4">
-          <img src="https://mukund-jagannath.github.io/YEP/s(2).png" style="width:100% " class="w3-hover-opacity"
-            alt="ROCK PAPER SCISSORS">
-          <a href="https://mukund-jagannath.github.io/YEP/Rock%20Paper%20Scissors%20final%20v01.html"
-            target="_blank">"Rock Paper
-            Scissors"</a>
-          <span class="w3-row-padding w3-center w3-text-white">Use your mouse to click your option and defeat
-            Yeppy</span>
-
-
-          <!-- <script src="timer.js"></script>    -->
-
-        </div>
-
-
-        <div class="w3-col m4">
-          <img src="https://mukund-jagannath.github.io/YEP/s(4).png" style="width:100%" class="w3-hover-opacity"
-            alt="BALL PUNCHER">
-          <a href="https://mukund-jagannath.github.io/YEP/Ball%20Puncher.html" target="_blank">"Ball
-            Puncher"</a>
-          <span class="w3-row-padding w3-center w3-text-white">Use your left and right arrow keys to move the ball
-            avoiding the obstacles</span>
-        </div>
-
-
-
-        <div class="w3-col m4">
-          <img src="https://mukund-jagannath.github.io/YEP/s(5).png" style="width:100%" class="w3-hover-opacity"
-            alt="ZOMBIE CUBE">
-          <a href="https://mukund-jagannath.github.io/YEP/ZOMBIE%20CUBE%20(1).html" target="_blank">"Zombie
-            Cube"</a>
-          <span class="w3-row-padding w3-center w3-text-white">Use your WASD keys OR arrow keys to move your cube
-            through the maze
-            avoiding the zombie cubes
-        </div>
-
-
-
-        <div class="w3-col m4">
-          <img src="https://mukund-jagannath.github.io/YEP/s(1).png" style="width:100%" class="w3-hover-opacity"
-            alt="ZOMBIE SHOOTOUT">
-          <a href="https://mukund-jagannath.github.io/YEP/Shooting%20Game%20with%20Zombies%20.html"
-            target="_blank">"Zombie
-            Shootout"</a>
-          <span class="w3-row-padding w3-center w3-text-white">Use your left and right arrow keys to move the ball
-            avoiding the obstacles</span>
-        </div>
-
-
-
-
-        <div class=" w3-col m4">
-          <img src="https://mukund-jagannath.github.io/YEP/s(3).png" style="width:100%" class="w3-hover-opacity"
-            alt="CRAIG'S BOOKHUNT">
-          <a href="https://mukund-jagannath.github.io/YEP/Craig's%20Book%20Hunt.html" target="_blank">"Craig's Book
-            Hunt"</a>
-          <span class="w3-row-padding w3-center w3-text-white">Use your left and right arrow keys to move the ball
-            avoiding the obstacles</span>
-        </div>
-
-        <!-- Pricing Section -->
-
-
+      <div class="tooltip">
+        <img src="https://mukund-jagannath.github.io/YEP/s(3).png" style="width:151PX" class="w3-hover-opacity"
+          onclick=startgame(5) alt="CRAIG'S BOOKHUNT">
+        <span class="tooltiptext">Use your mouse to move Craig around to collect the books
+          avoiding the junk food</span>
+        <!--        <span class="w3-row-padding w3-center w3-text-white">Use your mouse to move Craig around to collect the books
+            avoiding the junk food</span> -->
       </div>
 
     </div>
 
+    <!--Display timer -->
 
-
-    <div class="w3-content w3-container w3-padding-10" id="teamdetails">
-
-
-
-      <div class="w3-row-padding w3-center">
-
-        <!-- Modal for full size images on click
-        <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-          <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
-              class="fa fa-remove"></i></span>
-          <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="w3-opacity w3-large"></p>
-          </div>
-        </div>
-        <br><br>-->
-
-        <!-- Third Parallax Image with Portfolio Text -->
-        <div class="bgimg-3 w3-display-container w3-opacity-min " id="team">
-          <div class="w3-display-topleft">
-            <span class="w3-xlarge w3-text-lime w3-wide"> <b>TEAM</b></span>
-
-          </div>
-
-          <div class="w3-display-bottomleft">
-            <span class="w3-hide-small w3-text-white w3-wide">Aahana, Anish, Arnav, Kaushik, Mahima, Mukund, Puri,
-              Tejas,
-              Veda,
-              Yajat</span>
-          </div>
-
-        </div>
+    <!-- <H1>HELLO</H1>
+    <H2>THERE</H2> -->
+    <div id="gamearea">
+      <div class="w3-content w3-center w3-container">
+        <iframe src="https://mukund-jagannath.github.io/YEP/DefaultGamescreen.jpg" style="border:10px black ;"
+          title="Game window" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px"
+          height="600px" width="800px" id="gamewindow" allowfullscreen="false"></iframe>
       </div>
+      <p id="demo" class="w3-center w3-xxlarge w3-text-white"><em>I am your timer</em></p>
+
     </div>
-    <!-- Container (Contact Section) -->
-    <!--
-          <div class="w3-content w3-container w3-padding-64" id="contact">
-            <h3 class="w3-center"></h3>
-            <p class="w3-center"><em>We'd love your feedback</em></p>
+  </div>
 
-            <div class="w3-row w3-padding-32 w3-section">
-              <div class="w3-col m4 w3-container">
-                <img src="https://i.pinimg.com/236x/f2/24/c4/f224c4a1356c3145b8b50f1a05abf759.jpg"
-                  class="w3-image w3-round" style="width:100%">
-              </div>
-              <div class="w3-col m8 w3-panel">
-                <div class="w3-large w3-margin-bottom">
-                  <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Bengaluru,
-                  India<br>
 
-                </div>
+  <div>
+    <!-- <H1>TEAM</H1> -->
+    <h3 class="w3-center w3-text-lime w3-xxlarge"><b>OUR FABULOUS TEAM</b></h3>
+    <section id="yepcontainer">
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Aahana.jpeg" height=120px></p>
+        <p>Aahana</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Anish.jpeg" height=120px></p>
+        <p>Anish</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Arnav.jpeg" height=120px></p>
+        <p>Arnav</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Kaushik.jpg" height=120px></p>
+        <p>Kaushik</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Mahima.jpeg" height=120px></p>
+        <p>Mahima</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/mukunda.jpeg" height=120px></p>
+        <p>Mukund</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Puri.jpeg" height=120px></p>
+        <p>Puri</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Tejas.jpeg" height=120px></p>
+        <p>Tejas</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Veda.jpeg" height=120px></p>
+        <p>Veda</p>
+      </div>
+      <div>
+        <p><img src="https://mukund-jagannath.github.io/YEP/Yajat.jpeg" height=120px></p>
+        <p>Yajat</p>
+      </div>
 
-                <form action="/action_page.php" target="_blank">
-                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-                    <div class="w3-half">
-                      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                    </div>
-                    <div class="w3-half">
-                      <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-                    </div>
-                  </div>
-                  <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                  <button class="w3-button w3-black w3-right w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        -->
 
-    <!-- Footer -->
-    <!--
-          <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-            <div class="w3-xlarge w3-section">
-              <i class="fa fa-facebook-official w3-hover-opacity"></i>
-              <i class="fa fa-instagram w3-hover-opacity"></i>
-              <i class="fa fa-snapchat w3-hover-opacity"></i>
-              <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-              <i class="fa fa-twitter w3-hover-opacity"></i>
-              <i class="fa fa-linkedin w3-hover-opacity"></i>
-            </div>
-            <p>Made by <a href="" title="W3.CSS" target="_blank" class="w3-hover-text-green">YEP.GROUP-3</a></p>
-          </footer>
-        -->
-    <script>
-      // Modal Image Gallery
-      function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
+    </section>
+  </div>
+
+
+  <script>
+    // Modal Image Gallery
+    /*function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+*/
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
       }
+    }
 
-      // Change style of navbar on scroll
-      window.onscroll = function () { myFunction() };
-      function myFunction() {
-        var navbar = document.getElementById("myNavbar");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-        } else {
-          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-        }
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
       }
-
-      // Used to toggle the menu on small screens when clicking on the menu button
-      function toggleFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else {
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-      var audio = new Audio('https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3');
-      var timeRemaining = 0;
-      function init() {
-        timeRemaining = 0;
-        document.getElementById("demo").innerHTML = "Your Access starts in 5 seconds...";
+    }
+    var audio = new Audio('https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3');
+    var timeRemaining = 0;
+    function init() {
+      timeRemaining = 0;
+      document.getElementById("demo").innerHTML = "Your Access starts in 5 seconds...";
+      audio.play();
+      //document.getElementById("playbutton").disabled = true;
+      var startRem = 4;
+      var t = setInterval(function () {
+        document.getElementById("demo").innerHTML = "Your Access starts in " + startRem + " seconds...";
         audio.play();
-        //document.getElementById("playbutton").disabled = true;
-        var startRem = 4;
-        var t = setInterval(function () {
-          document.getElementById("demo").innerHTML = "Your Access starts in " + startRem + " seconds...";
+        startRem--;
+
+        if (startRem === 0) {
+          clearInterval(t);
+          startRem = 0;
+          startTimer();
+        }
+      }, 1000);
+    }
+    function startTimer() {
+      //timer for 20 mins
+      //timeRemaining = 1200;
+
+      //timer for 30 mins
+      //timeRemaining = 1800;
+
+      timeRemaining = 125;
+
+      //document.getElementById("playbutton").disabled = false;
+      var x = setInterval(function () {
+        var timeRemainingMin = parseInt(timeRemaining / 60);
+        var timeRemainingSec = timeRemaining % 60;
+
+        if (timeRemainingMin)
+          document.getElementById("demo").innerHTML = "Your access runs out in " + timeRemainingMin + " minutes " + timeRemainingSec + " seconds";
+        else
+          document.getElementById("demo").innerHTML = "Your access runs out in " + timeRemainingSec + " seconds";
+
+
+
+        // message and beep every 5 minutes
+        //if (timeRemaining > 5 & (timeRemaining % 300) == 0) {
+        if (timeRemaining && (timeRemaining % 60) == 0) {
           audio.play();
-          startRem--;
+          alert("Hi !!\n \n Looks like you are enjoing this game ? \n You can also try the other games 😃 !!");
+        }
 
-          if (startRem === 0) {
-            clearInterval(t);
-            startRem = 0;
-            startTimer();
-          }
-        }, 1000);
+        timeRemaining--;
+
+        if (timeRemaining < 0) {
+          audio.play();
+          clearInterval(x);
+          timeRemaining = 0;
+          //document.getElementById("demo").innerHTML = "TIME'S UP 😞";
+          //document.getElementById("demo").style = "w3-center";
+          document.getElementById("gamescorner").innerHTML = "<H1>TIME'S UP 😞</H1>";
+          document.getElementById("gamescorner").style.textAlign = "center";
+          document.getElementById("gamescorner").style.height = "80px";
+          document.getElementById("gamescorner").style.color = "Red";
+
+          document.getElementById("gamesheader").innerHTML = "***************";
+          document.getElementById("gamesheader").style.textAlign = "center";
+          // alert("TIME'S UP 😞");
+          //document.getElementById("playbutton").disabled = true;
+        }
+      }, 1000);
+    }
+
+    //var gameurl = "DefaultGamescreen.jpg";
+
+    function startgame(game) {
+      if (game == 1) {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/Rock%20Paper%20Scissors.html";
+        //   document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/Rock%20Paper%20Scissors%20final%20v01.html";
+
       }
-      function startTimer() {
-        timeRemaining = 124;
-        //document.getElementById("playbutton").disabled = false;
-        var x = setInterval(function () {
-          var timeRemainingMin = parseInt(timeRemaining / 60);
-          var timeRemainingSec = timeRemaining % 60;
-
-          if (timeRemainingMin)
-            document.getElementById("demo").innerHTML = "Your access runs out in " + timeRemainingMin + " minutes " + timeRemainingSec + " seconds";
-          else
-            document.getElementById("demo").innerHTML = "Your access runs out in " + timeRemainingSec + " seconds";
-
-          if (timeRemaining == 120) audio.play();
-          timeRemaining--;
-          if (timeRemaining < 0) {
-            clearInterval(x);
-            timeRemaining = 0;
-            //document.getElementById("demo").innerHTML = "TIME'S UP 😞";
-            //document.getElementById("demo").style = "w3-center";
-            document.getElementById("gamescorner").innerHTML = "<H1>TIME'S UP 😞</H1>";
-            document.getElementById("gamescorner").style.textAlign = "center";
-            document.getElementById("gamescorner").style.color = "Red";
-            //document.getElementById("playbutton").disabled = true;
-          }
-        }, 1000);
+      else if (game == 2) {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/Ball%20Puncher.html";
       }
+      else if (game == 3) {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/ZOMBIE%20CUBE%20(1).html";
+      }
+      else if (game == 4) {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/Shooting%20Game%20with%20Zombies%20.html";
+      }
+      else if (game == 5) {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/Craig's%20Book%20Hunt.html";
+      }
+      else {
+        document.getElementById("gamewindow").src = "https://mukund-jagannath.github.io/YEP/DefaultGamescreen.jpg";
+      }
+      // <a href="#gamewindow" ></a>
+    }
 
-      init();
+    init();
               //startTimer();
-    </script>
+  </script>
 
 
 </body>
