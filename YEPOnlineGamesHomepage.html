@@ -223,7 +223,7 @@
       <div class="tooltip">
         <img src="https://mukund-jagannath.github.io/YEP/s(1).png" style="width:151PX" class="w3-hover-opacity"
           onclick=startgame(4) alt="ZOMBIE SHOOTOUT">
-        <span class="tooltiptext">Use your arrow keys to move around and space key to shoot the
+        <span class="tooltiptext">Use P for shop , arrows to move, 1 and 2 to switch guns, and space key to shoot the
           zombies </span>
         <!--     <span class="w3-row-padding w3-center w3-text-yellow">Use your arrow keys to move and space key to shoot the
           zombies</span> -->
@@ -363,7 +363,7 @@
       //timer for 30 mins
       //timeRemaining = 1800;
 
-     // timeRemaining = 125;
+      // timeRemaining = 125;
 
       //document.getElementById("playbutton").disabled = false;
       var x = setInterval(function () {
@@ -377,7 +377,7 @@
 
 
         //Warning beep when 2 mins remaining
-        if(timeRemaining ==120) {
+        if (timeRemaining == 120) {
           audio.play();
         }
 
@@ -385,8 +385,8 @@
 
 
         // message and beep every 5 minutes
-        if (timeRemaining  && (timeRemaining % 300) == 0) {
-        //if (timeRemaining && (timeRemaining % 60) == 0) {
+        if (timeRemaining && (timeRemaining % 300) == 0) {
+          //if (timeRemaining && (timeRemaining % 60) == 0) {
           audio.play();
           alert("Hi !!\n \n Looks like you are enjoing this game ? \n You can also try the other games 😃 !!");
         }
